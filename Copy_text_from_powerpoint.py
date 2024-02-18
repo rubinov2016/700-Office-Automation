@@ -14,16 +14,6 @@ def extract_text_from_pptx_file(file_path):
     return '\n'.join(text)
 
 def extract_text_from_folder(folder_path):
-    extracted_text = []
-    for root, dirs, files in os.walk(folder_path):
-        for file_name in files:
-            if file_name.endswith('.pptx'):
-                file_path = os.path.join(root, file_name)
-                text = extract_text_from_pptx_file(file_path)
-                extracted_text.append(text)
-    return '\n'.join(extracted_text)
-
-def extract_text_from_folder(folder_path):
     for root, dirs, files in os.walk(folder_path):
         for file_name in files:
             if file_name.endswith('.pptx'):
