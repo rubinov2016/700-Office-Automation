@@ -1,5 +1,8 @@
 import os
+import sys
 from pptx import Presentation
+# pip install python-pptx
+
 
 def extract_text_from_pptx_file(file_path):
     prs = Presentation(file_path)
@@ -21,6 +24,8 @@ def extract_text_from_folder(folder_path):
     return '\n'.join(extracted_text)
 
 # Replace 'your_folder_path' with the path to your folder containing PowerPoint files
-folder_path = 'C:\Users\Lenovo\OneDrive - Solent University\Documents\'
+# folder_path = r'C:\Users\Lenovo\OneDrive - Solent University\Documents\724 AI in Business (Friday)\Lesson 1\'
+folder_path = r'C:\Users\Lenovo\OneDrive - Solent University\Documents\724 AI in Business (Friday)\Lesson 1'
 all_texts = extract_text_from_folder(folder_path)
-print(all_texts)
+print(all_texts.encode('utf-8').decode(sys.stdout.encoding, 'ignore'))
+
