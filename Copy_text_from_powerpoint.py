@@ -26,5 +26,7 @@ def extract_text_from_folder(folder_path):
 
 # folder_path = r'C:\Users\Lenovo\OneDrive - Solent University\Documents\724 AI in Business (Friday)\Lesson 1\'
 folder_path = r'C:\Users\Lenovo\OneDrive - Solent University\Documents\725 Analytics Visualisation (Tue)'
+current_path = os.getcwd()
+folder_path = current_path  
 extract_text_from_folder(folder_path)
 
